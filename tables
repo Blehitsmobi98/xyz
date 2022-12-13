@@ -1,0 +1,90 @@
+Tables related to payment:
+
+ePay_PaymentEngines (List of Payment Engines with Engine ID)
+Bits	Description
+EID	It is the engine ID that has been assign to payment gateways
+Name	It has the name of payment gateways
+Bactive	It shows which payment gateway is active.
+ePay_Configuration (Location based Practice payment gateways configuration)
+Bits	Description
+IPRACID	It has practice ID
+ILOCID	A practice can has multiple locations. This bit has the location ids for the practice.
+Merchantid	This id is shared by payment gateway
+RegKey	This key is shared by payment gateway and it expires after 30 days
+isDefaultEpaySetting	If it is 1, it shows that Merchant ID and Merchant Key has been applied to all the locations of a practice, else it will be zero
+ePay_Transaction (Record related to transaction requests)
+Bits	Description
+TransId	It has transaction Id.
+PracticeId	It has practice Id.
+LocationId	A practice can has multiple locations. This bit has the location ids for the practice.
+UserId	It shows the User Id of the user who made the transaction.
+IPAddress	It shows the IP address of User's system
+Merchantid	This id is shared by payment gateway
+RegKey	This key is shared by payment gateway and it expires after 30 days
+Transaction Type	It shows what sort of transaction has been made
+CurrentDatetTime	It shows the time at which transaction was made
+ErrorCode	It shows the error code if occurs in a transaction. If it is '0', it means that 'Transaction Successful', else it will have error code. It also shows the response of transaction in case of Zirmed/TransaEngine and EasyPay
+RespMsg	It shows the response message of the transaction
+IsSync	Curemd has a service that runs after a configured time, it reconciles the transaction, if reconcile is done through
+IsSwipeCard	When a transaction has been made using a card, then this bit is changed to 1.
+epay_TransactionRequestDetails (Transaction request id against Appointment id)
+Bits	Description
+ePay_Financial_Transaction (Transaction related to appointment id)
+Bits	Description
+RefNumber	This bit depends upon RefBy, if RefBy bit has patient then RefNumber will have patient ID, if RefBy bit has appointment then RefNumber will have appointment id.
+PaymentMethod	It shows the type of payment transaction.
+ParentFinancialTransId	This bit will have transaction id that has been voided or refund. Other than those transactions, it will be null.
+RefBy	It shows that payment is done against Appointment ID or Patient ID. If it is null, it means that transaction has been voided/refunded.
+ePay_Financial_TransactionResp (Financial transaction responses)
+Bits	Description
+Financial_TransId	
+AuthCode	
+OrderId	
+TimeStamp	
+ResponseCode	
+ResponseMessage	
+TransactionId	
+AVSResponseCode	
+CVVResponseCode	
+ProcessorCode	
+ProcessorMessage	
+ErrorMessage	
+PartiallyApprovedAmount	
+EasyPayTxID	
+PaymentToken	
+TimeStamp	
+ePay_Copay_Transaction
+Bits	Description
+iID	It shows id of an entry.
+iApptid	It shows the appointment ID against which Copay has been paid.
+iTransactionID	
+dAmount	It shows the amount of Copay.
+ePay_CardOnFile
+Bits	Description
+CardOnFileId	
+CustomerId	
+TransId	
+Token	
+CardNumber	
+CardType	
+ExpYear	
+ExpMonth	
+OnFileUntil	
+ChargeLimit	
+IsDeleted	
+EpayPatientID	
+ePay_CustomerStatementRequests
+Bits	Description
+UserID	
+PatientId	
+RequestData	
+RequestType	
+CxApiKey	
+CreatedAt	
+ePay_CustomerStatementResponses
+Bits	Description
+RequestId	
+ResponseData	
+ResponseMessage	
+ResponseCode	
+CreatedAt	

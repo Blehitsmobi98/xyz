@@ -1,0 +1,35 @@
+Text-to-Pay Configuration
+Select Global Pay payment gateway from following workflow.
+
+Go to Settings > Practice > My Practice Setting > Device Integration
+• Select Global Pay payment gateway
+• Click on Save
+
+Go to Settings > Practice > Practice User
+• Search for your user (using username, first name, or last name)
+• Select your user
+• Select the Support checkbox and click on Save
+
+Again, go to Device Integration 
+• Select Enable TextToPay checkbox under TextToPay Setting section
+• Enable Administrative Alerts checkbox under Text Message (TM) Alerts, Notification and Reminders Section
+• Click on Save
+
+Go to Settings > Practice > My Practice Setting > Device Integration
+• Click on Configuration
+• Configure CX-API-Key in CX-API-Key field for requested location
+
+CX-API-Key = ZMIwmhIflYDVEFX1oTnGk4ME
+Validate the following credentials from epay_configuration table for all or specific practice location
+
+TokenizationKey = IKR1NB3M2GZmJYaSRAlMSK6tpghP6diS
+RegKey = 5YqF1WbU30WHF14L4GgUm1jIxAj7K5ZpDUywg8iowkm
+MerchantId = otJd7os2N5iKrsaaN7jha2ikT0HS2tDH
+Go to Patient
+• Select required Patient
+• Enter a valid mobile number in patient demographics and save it
+
+Go to Patient > Preferences
+• In Alerts section enable the Administrative Alerts checkbox
+• Enable the Text checkbox against Administrative Alerts
+• Click on Save
